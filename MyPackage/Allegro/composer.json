@@ -1,0 +1,47 @@
+{
+    "name": "mypackage/allegro",
+    "description": ":description",
+    "license": "allegro",
+    "authors": [
+        {
+            "name": "sanjeev",
+            "email": "sanjeev05boldertech@gmail.com",
+            "homepage": "http://localhost/laravel_package/public/"
+        }
+    ],
+    "homepage": "https://github.com/mypackage/allegro",
+    "keywords": ["Laravel", "allegro"],
+    "require": {
+        "illuminate/support": "~5",
+        "laravel/passport": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+		"classmap": [
+			"App/Mylibs"
+		],
+        "psr-4": {
+            "MyPackage\\allegro\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MyPackage\\allegro\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MyPackage\\allegro\\allegroServiceProvider"
+            ],
+            "aliases": {
+                "allegro": "MyPackage\\allegro\\Facades\\allegro"
+            }
+        }
+    }
+}
